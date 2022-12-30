@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
 
 interface LinkButtonProps {
   content: string;
@@ -14,7 +13,7 @@ export function LinkButton({
   to
 }: LinkButtonProps) {
   return (
-    <Link to={to}>
+    <a href={to}>
       <button
       className={`${className} transition-all ring-1 uppercase text-xs
       ring-white bg-white hover:bg-PrimaryColor w-52 md:w-64 pb-3 mb-4
@@ -25,7 +24,7 @@ export function LinkButton({
       <span className="relative -right-3 top-4">{icon}</span>
         {content}
     </button>
-    </Link>
+    </a>
 
   );
 }
